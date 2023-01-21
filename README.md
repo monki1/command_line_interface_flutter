@@ -1,17 +1,54 @@
 # command_line_interface
 
-A new Flutter project.
 
-## Getting Started
+A CLIController() has
+    - a inputController [CLITextFieldController]
+    - a displayController [CLIListViewController]
 
-This project is a starting point for a Flutter application.
+```dart
 
-A few resources to get you started if this is your first Flutter project:
+CLIController cc = CLIController();
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Function(String) interpreter = (String s) {
+  ///update displayController.content to update the display
+  cc.displayController.content = [
+    ...cc.displayController.content,
+    Text(s),
+  ];
+};
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# command_line_interface_flutter
+main(){
+  /// listen to [onSubmit] of [inputController] to interpret the input
+  cc.inputController.onSubmit.listen(
+    ///put your [interpreter] here
+    interpreter
+    );
+  runApp(
+      quickAppGenerator(
+          cc.widget,
+      )
+  );
+}
+```
+
+
+
+```dart
+class CLIController{
+  final CLITextFieldController inputController;
+  final CLIListViewController displayController;
+```
+
+```dart
+class CLIListViewController {
+  /// set [content] takes in [List]of[Widget] and adds it to screen (first on top, last on bottom)
+  /// get [content] returns [List]of[Widget]the current content of the screen
+  /// get [widget] returns the [ListView] widget
+  /// get [scrollController] returns [ScrollController] the scroll controller for the ListView
+```
+```dart
+class CLITextFieldController {
+  /// get [Stream<String>] onChange, onSubmit
+  /// [functions] addTextToField
+  /// [get] widget, textEditingController, focusNode
+```
