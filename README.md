@@ -51,4 +51,4 @@ class CLITextFieldController {
   /// get [Stream<String>] onChange, onSubmit
   /// [functions] addTextToField
   /// [get] widget, textEditingController, focusNode
-```
+```# flutter_quick_app_generator
