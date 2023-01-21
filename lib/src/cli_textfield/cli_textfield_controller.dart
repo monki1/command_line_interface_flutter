@@ -1,13 +1,15 @@
 
 
 
-import 'package:command_line_interface/cli_textfield/cli_textfield_factory.dart';
-import 'package:command_line_interface/cli_textfield/default_input_decoration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
+import 'cli_textfield_factory.dart';
+import 'default_input_decoration.dart';
+
 class CLITextFieldController {
+
   /// [streams] onChange, onSubmit
   /// [functions] addTextToField
   /// [get] widget, textEditingController, focusNode
