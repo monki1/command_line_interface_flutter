@@ -1,9 +1,9 @@
 # command_line_interface
 
 
-A CLIController() has
-    - a inputController [CLITextFieldController]
-    - a displayController [CLIListViewController]
+### A CLIController has
+- a inputController [ CLITextFieldController ]
+- a displayController [ CLIListViewController ]
 
 ```dart
 
