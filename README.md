@@ -1,5 +1,13 @@
 # command_line_interface
 
+Add this to `pubspec.yaml"
+```yaml
+  command_line_interface:
+    git:
+      url: https://github.com/monki1/command_line_interface_flutter.git
+      ref: main
+```
+
 
 ### A CLIController has
 - a inputController [ CLITextFieldController ]
