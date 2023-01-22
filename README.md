@@ -1,6 +1,6 @@
 # command_line_interface
 
-Add this to `pubspec.yaml"
+Add this to `pubspec.yaml`
 ```yaml
   command_line_interface:
     git:
