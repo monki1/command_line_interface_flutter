@@ -1,16 +1,12 @@
 import 'package:command_line_interface/command_line_interface.dart';
 import 'package:flutter/cupertino.dart';
-
-import 'quick_app_generator.dart';
+import 'package:quick_app_generator/quick_app_generator.dart';
 
 CLIController cc = CLIController();
 
 Function(String) interpreter = (String s) {
-  ///update displayController.content to update the display
-  cc.displayController.content = [
-    ...cc.displayController.content,
-    Text(s),
-  ];
+  ///set displayController.content to update the display
+  cc.displayController.content = cc.displayController.content + [Text(s)];
 };
 
 main(){
@@ -21,6 +17,7 @@ main(){
     );
   runApp(
       quickAppGenerator(
+        ///get [widget] from [CLIController]
           cc.widget,
       )
   );
