@@ -21,6 +21,7 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
     autofocus: true,
     controller: controller,
     decoration: decoration,
+    multiline: true,
   );
   return t;
 }
