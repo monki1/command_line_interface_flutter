@@ -102,15 +102,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.2"
-  quick_app_generator:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: main
-      resolved-ref: e48bdb8d355e2b21b372ad04a2d1fd9ce38964dc
-      url: "https://github.com/monki1/flutter_quick_app_generator.git"
-    source: git
-    version: "1.0.0+1"
   rxdart:
     dependency: "direct main"
     description:

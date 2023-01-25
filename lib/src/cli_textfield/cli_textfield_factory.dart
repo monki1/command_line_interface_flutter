@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
+int maxLength = 50;
 
 TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSubject<String> onSubmitStream,
      TextEditingController controller,
@@ -21,7 +22,7 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
     autofocus: true,
     controller: controller,
     decoration: decoration,
-    multiline: true,
+    maxLength: maxLength,
   );
   return t;
 }
