@@ -22,8 +22,12 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
     autofocus: true,
     controller: controller,
     decoration: decoration,
+    textInputAction: TextInputAction.send,
     minLines: 1,
     maxLines: maxLines,
+    onEditingComplete: (){
+      // focusNode.unfocus();
+    },
   );
   return t;
 }
