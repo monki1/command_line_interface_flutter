@@ -22,6 +22,7 @@ class CLITextFieldController {
   //keyboardTypeStream
   final TextEditingController textEditingController;
   final FocusNode focusNode;
+  final TextInputType _keyboardType = TextInputType.text;
 
   CLITextFieldController({InputDecoration decoration = cliDefaultTextDecoration})
       : onChange = BehaviorSubject<String>(),
@@ -40,8 +41,12 @@ class CLITextFieldController {
         TextPosition(offset: textEditingController.text.length)
     );
   }
+
+  //behavior subject replaceMap
+
+
   Widget get widget{
-    return cliTextFieldFactory(onChange, onSubmit, textEditingController, focusNode, _decoration);
+    return cliTextFieldFactory(onChange, onSubmit, textEditingController, focusNode, _decoration, _keyboardType);
   }
 
 }

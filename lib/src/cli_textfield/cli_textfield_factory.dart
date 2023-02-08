@@ -4,7 +4,10 @@ int maxLines = 50;
 
 TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSubject<String> onSubmitStream,
      TextEditingController controller,
-     FocusNode focusNode, InputDecoration decoration) {
+     FocusNode focusNode, InputDecoration decoration,
+    //textInputType
+    TextInputType keyboardType,
+    ) {
   //change to take stream, then sink the stream
   //
 
@@ -23,6 +26,7 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
     controller: controller,
     decoration: decoration,
     textInputAction: TextInputAction.send,
+    keyboardType: keyboardType,
     minLines: 1,
     maxLines: maxLines,
     onEditingComplete: (){
