@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-cliListViewFactory(Stream<List<Widget>> stream, ScrollController scrollController) {
+Widget cliListViewFactory(Stream<List<Widget>> stream, ScrollController scrollController) {
   //display in a scrollable list
   return StreamBuilder(
     stream: stream,

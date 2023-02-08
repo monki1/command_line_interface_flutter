@@ -21,7 +21,7 @@ class CLIListViewController {
   }
   List<Widget> get content => _content;
 
-  get widget => cliListViewFactory(_subject.stream, _scrollController);
+  Widget get widget => Expanded(child:  cliListViewFactory(_subject.stream, _scrollController));
   ScrollController get scrollController => _scrollController;
 
 }
