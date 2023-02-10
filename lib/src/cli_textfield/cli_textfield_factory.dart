@@ -15,7 +15,7 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
   TextField t =  TextField(
     onSubmitted: (String s){
       controller.clear();
-      focusNode.requestFocus();//keep focused
+//       focusNode.requestFocus();//keep focused
       onSubmitStream.add(s);
     },
     onChanged: (String s){

@@ -14,13 +14,14 @@ class CLIController{
   final CLIListViewController displayController;
   final CLIScreenController screenController;
   late Widget? _widget=null;
-  CLIController({Function(String)? interpreter ,CLITextFieldController? textFieldController, CLIListViewController? displayController})
+  CLIController({Function(String)? interpreter ,CLITextFieldController? textFieldController, CLIListViewController? displayController, CLIScreenController? screenController})
       :inputController = textFieldController ?? CLITextFieldController(),
         displayController = displayController ?? CLIListViewController(),
-    screenController = CLIScreenController();
+    screenController = screenController ?? CLIScreenController();
 
 
   Widget get widget {
+    print(_widget);
     if(_widget==null){
       _initializeWidget();
     }

@@ -17,12 +17,16 @@ class CLITextFieldController {
   final BehaviorSubject <String> onSubmit;
   // final BehaviorSubject <String> _autoFillStream;
   final InputDecoration _decoration;
+
   //TODO
   //hintStream
   //keyboardTypeStream
   final TextEditingController textEditingController;
   final FocusNode focusNode;
-  final TextInputType _keyboardType = TextInputType.text;
+  TextInputType _keyboardType = TextInputType.text;
+  set keyboardType(TextInputType type){
+    _keyboardType = type;
+  }
 
   CLITextFieldController({InputDecoration decoration = cliDefaultTextDecoration})
       : onChange = BehaviorSubject<String>(),
