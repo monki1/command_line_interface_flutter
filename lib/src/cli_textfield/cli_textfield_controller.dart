@@ -3,6 +3,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rich_text_controller/rich_text_controller.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'cli_textfield_factory.dart';
@@ -16,12 +17,12 @@ class CLITextFieldController {
   final BehaviorSubject <String> onChange;
   final BehaviorSubject <String> onSubmit;
   // final BehaviorSubject <String> _autoFillStream;
-  final InputDecoration _decoration;
+  InputDecoration inputDecoration;
 
   //TODO
   //hintStream
   //keyboardTypeStream
-  final TextEditingController textEditingController;
+  TextEditingController textEditingController;
   final FocusNode focusNode;
   TextInputType _keyboardType = TextInputType.text;
   set keyboardType(TextInputType type){
@@ -32,9 +33,10 @@ class CLITextFieldController {
       : onChange = BehaviorSubject<String>(),
         onSubmit = BehaviorSubject<String>(),
         // _autoFillStream = BehaviorSubject<String>(),
-        textEditingController = TextEditingController(),
+        textEditingController = TextEditingController(
+        ),
         focusNode = FocusNode()
-        ,_decoration = decoration;
+        ,inputDecoration = decoration;
     // _autoFillStream.listen(addTextToField);
 
 
@@ -50,7 +52,7 @@ class CLITextFieldController {
 
 
   Widget get widget{
-    return cliTextFieldFactory(onChange, onSubmit, textEditingController, focusNode, _decoration, _keyboardType);
+    return cliTextFieldFactory(onChange, onSubmit, textEditingController, focusNode, inputDecoration, _keyboardType);
   }
 
 }
