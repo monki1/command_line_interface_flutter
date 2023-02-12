@@ -1,21 +1,26 @@
 class CLIScope{
   final Function(String) _rootInterpreter;
+  Function(String)? _rootListener;
   Function(String)? _activeInterpreter;
+  Function(String)? _activeListener;
 
 
 
   ///sets off before the active interpreter
   bool Function(String)? _topInterpreter;
-  set top(bool Function(String) interpreter){
+  setTop(bool Function(String) interpreter, {Function(String)? listener}){
     _topInterpreter = interpreter;
+    _rootListener = listener;
   }
 
   CLIScope(this._rootInterpreter);
-  request(Function(String) interpreter){
-    _activeInterpreter = interpreter;
+  request(Function(String) interpreter, {Function(String)? listener}){
+    setTop(interpreter, listener: listener);
   }
   release(){
     _activeInterpreter = null;
+    controller.input.textEditingController.removeListener(_activeListener!);
+    _activeListener = null;
   }
   interpret(String s){
     ///entry point for the input
@@ -29,6 +34,14 @@ class CLIScope{
       _activeInterpreter!(s);
     }else{
       _rootInterpreter(s);
+    }
+  }
+  listen(String s){
+    _topListener!(s);
+    if(_activeListener!=null){
+      _activeListener!(s);
+    }else{
+      _rootListener!(s);
     }
   }
 
