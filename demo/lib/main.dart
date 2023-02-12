@@ -6,12 +6,12 @@ CLIController cc = CLIController();
 
 Function(String) interpreter = (String s) {
   ///set displayController.content to update the display
-  cc.displayController.content = cc.displayController.content + [Text(s)];
+  cc.display.content = cc.display.content + [Text(s)];
 };
 
 main(){
   /// listen to [onSubmit] of [inputController] to interpret the input
-  cc.inputController.onSubmit.listen(
+  cc.input.onSubmit.listen(
     ///put your [interpreter] here
     interpreter
     );

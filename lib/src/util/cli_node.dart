@@ -16,12 +16,20 @@ abstract class CLINode {
 abstract class CommandNode  extends CLINode{
 
 
-  bool interpret(String s);
+  Future<bool> interpret(String s);
   bool isValidInput(String s);
+  @override
+  adopt(CLINode node) {
+    if(node is FunctionNode){
+      node._commandInterpreter = interpret;
+    }
+    super.adopt(node);
+  }
 
 }
 
 abstract class FunctionNode extends CLINode{
+  late Function(String) _commandInterpreter;
 
 }
 

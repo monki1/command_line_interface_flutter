@@ -10,12 +10,12 @@ abstract class CLI {
 
   CLI(this.controller) {
     scope = CLIScope(interpret);
-    controller.inputController.onSubmit.listen(scope.interpret);
+    controller.input.onSubmit.listen(scope.interpret);
   }
 
 
-  void interpret(String s){
-    if(!letNodesInterpret(s)){
+  interpret(String s) async {
+    if(!await letNodesInterpret(s)){
       rootScreen();
     }
   }
@@ -28,16 +28,21 @@ abstract class CLI {
     nodes.add(node);
   }
 
-  bool letNodesInterpret(String s){
+  Future<bool> letNodesInterpret(String s) async {
     for(CommandNode node in nodes){
       if(node.isValidInput(s)){
-        return node.interpret(s);
+        return await node.interpret(s);
       }
     }
     return false;
   }
 
   void rootScreen();
+
+  void adopt(CommandNode node){
+
+    nodes.add(node);
+  }
 
 
 
