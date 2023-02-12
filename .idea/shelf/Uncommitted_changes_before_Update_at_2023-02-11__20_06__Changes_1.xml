@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1" date="1676163998690" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2023-02-11, 20:06 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="build/ios/Debug-iphonesimulator/Runner.app/Frameworks/Flutter.framework/Flutter" />
+    <option name="AFTER_PATH" value="build/ios/Debug-iphonesimulator/Runner.app/Frameworks/Flutter.framework/Flutter" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/Flutter" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/ios/iphonesimulator/Runner.app/Runner" />
+    <option name="AFTER_PATH" value="build/ios/iphonesimulator/Runner.app/Runner" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/Runner" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/ios/Debug-iphonesimulator/App.framework/App" />
+    <option name="AFTER_PATH" value="build/ios/Debug-iphonesimulator/App.framework/App" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/App" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" />
+    <option name="AFTER_PATH" value="build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/kernel_blob.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/flutter_build/817af6f25dd0a7b00b1632ad23e9716f/app.dill" />
+    <option name="AFTER_PATH" value=".dart_tool/flutter_build/817af6f25dd0a7b00b1632ad23e9716f/app.dill" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/app.dill" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" />
+    <option name="AFTER_PATH" value="build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-11,_20_06_[Changes]1/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" />
+  </binary>
+</changelist>

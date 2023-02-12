@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8f5ca62-e084-4f56-903a-1d72c15a27b3" name="Changes" comment="submit now won't request focus" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KcPtJZtZZfbT23LXK0k11bi1iA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mw/Desktop/flutter/packages/command_line_interface&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/t" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/ui_controller" />
+      <recent name="$PROJECT_DIR$/lib/src" />
+      <recent name="$PROJECT_DIR$/lib/src/t2" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flutter.cli_controller.dart">
+    <configuration name="cli_controller.dart" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/cli_controller.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
+      <option name="filePath" value="$PROJECT_DIR$/demo/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8f5ca62-e084-4f56-903a-1d72c15a27b3" name="Changes" comment="" />
+      <created>1674271115913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674271115913</updated>
+      <workItem from="1674271117259" duration="7263000" />
+      <workItem from="1674278669704" duration="6202000" />
+      <workItem from="1674439718033" duration="663000" />
+      <workItem from="1674444615075" duration="589000" />
+      <workItem from="1674445215074" duration="93000" />
+      <workItem from="1674445315909" duration="25000" />
+      <workItem from="1674445348891" duration="598000" />
+      <workItem from="1674447561595" duration="11098000" />
+      <workItem from="1674780438442" duration="909000" />
+      <workItem from="1674859313805" duration="2837000" />
+      <workItem from="1675338632190" duration="127000" />
+      <workItem from="1675338769957" duration="598000" />
+      <workItem from="1675341051849" duration="8782000" />
+      <workItem from="1675910271629" duration="806000" />
+      <workItem from="1675912158814" duration="2755000" />
+      <workItem from="1676044939168" duration="72000" />
+      <workItem from="1676045196447" duration="1036000" />
+      <workItem from="1676095090385" duration="5033000" />
+    </task>
+    <task id="LOCAL-00001" summary="listview controller">
+      <created>1674276194669</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674276194669</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cli controller">
+      <created>1674276988560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674276988560</updated>
+    </task>
+    <task id="LOCAL-00003" summary="clean up">
+      <created>1674277005486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674277005486</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactor">
+      <created>1674279712898</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674279712898</updated>
+    </task>
+    <task id="LOCAL-00005" summary="demo">
+      <created>1674279731159</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674279731159</updated>
+    </task>
+    <task id="LOCAL-00006" summary="readme + import">
+      <created>1674279751860</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674279751860</updated>
+    </task>
+    <task id="LOCAL-00007" summary="phase 1 done">
+      <created>1674279933894</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674279933894</updated>
+    </task>
+    <task id="LOCAL-00008" summary="CLEAN UP">
+      <created>1674280019587</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674280019587</updated>
+    </task>
+    <task id="LOCAL-00009" summary="CLEAN UP">
+      <created>1674280043724</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674280043724</updated>
+    </task>
+    <task id="LOCAL-00010" summary="CLEAN UP">
+      <created>1674280183115</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674280183115</updated>
+    </task>
+    <task id="LOCAL-00011" summary="CLEAN UP">
+      <created>1674312513585</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674312513585</updated>
+    </task>
+    <task id="LOCAL-00012" summary="i">
+      <created>1674440174006</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674440174006</updated>
+    </task>
+    <task id="LOCAL-00013" summary="textfield multiline = true">
+      <created>1674444676550</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674444676550</updated>
+    </task>
+    <task id="LOCAL-00014" summary="changed to custom scrollview">
+      <created>1674675270648</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674675270648</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix max lines of textfield">
+      <created>1674680133143</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674680133143</updated>
+    </task>
+    <task id="LOCAL-00016" summary="custom scroll view">
+      <created>1674867446549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674867446549</updated>
+    </task>
+    <task id="LOCAL-00017" summary="textInpuAction">
+      <created>1674867471085</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674867471085</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix listview">
+      <created>1675842481873</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675842481873</updated>
+    </task>
+    <task id="LOCAL-00019" summary="cliScreenController">
+      <created>1675842667426</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1675842667426</updated>
+    </task>
+    <task id="LOCAL-00020" summary="submit now won't request focus">
+      <created>1675910479925</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1675910479925</updated>
+    </task>
+    <task id="LOCAL-00021" summary="cli screen">
+      <created>1676044214393</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676044214393</updated>
+    </task>
+    <task id="LOCAL-00022" summary="revert to default text editing controller, can be customized from outside">
+      <created>1676160674918</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160674918</updated>
+    </task>
+    <task id="LOCAL-00023" summary="restructured">
+      <created>1676161136089</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161136089</updated>
+    </task>
+    <task id="LOCAL-00024" summary="terminal abstract">
+      <created>1676163622792</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676163622792</updated>
+    </task>
+    <task id="LOCAL-00025" summary="export">
+      <created>1676163968707</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676163968707</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="listview controller" />
+    <MESSAGE value="cli controller" />
+    <MESSAGE value="clean up" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="demo" />
+    <MESSAGE value="readme + import" />
+    <MESSAGE value="phase 1 done" />
+    <MESSAGE value="CLEAN UP" />
+    <MESSAGE value="i" />
+    <MESSAGE value="textfield multiline = true" />
+    <MESSAGE value="changed to custom scrollview" />
+    <MESSAGE value="fix max lines of textfield" />
+    <MESSAGE value="custom scroll view" />
+    <MESSAGE value="textInpuAction" />
+    <MESSAGE value="fix listview" />
+    <MESSAGE value="cliScreenController" />
+    <MESSAGE value="submit now won't request focus" />
+    <MESSAGE value="cli screen" />
+    <MESSAGE value="revert to default text editing controller, can be customized from outside" />
+    <MESSAGE value="restructured" />
+    <MESSAGE value="terminal abstract" />
+    <MESSAGE value="export" />
+    <option name="LAST_COMMIT_MESSAGE" value="export" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+</project>

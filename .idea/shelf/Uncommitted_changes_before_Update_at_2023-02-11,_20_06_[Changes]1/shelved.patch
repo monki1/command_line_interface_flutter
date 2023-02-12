@@ -1,0 +1,70 @@
+Index: pubspec.lock
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pubspec.lock b/pubspec.lock
+--- a/pubspec.lock	
++++ b/pubspec.lock	
+@@ -102,6 +102,13 @@
+       url: "https://pub.dartlang.org"
+     source: hosted
+     version: "1.8.2"
++  rich_text_controller:
++    dependency: "direct main"
++    description:
++      name: rich_text_controller
++      url: "https://pub.dartlang.org"
++    source: hosted
++    version: "1.4.0"
+   rxdart:
+     dependency: "direct main"
+     description:
+Index: pubspec.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pubspec.yaml b/pubspec.yaml
+--- a/pubspec.yaml	
++++ b/pubspec.yaml	
+@@ -37,6 +37,7 @@
+   # Use with the CupertinoIcons class for iOS style icons.
+   cupertino_icons: ^1.0.2
+   rxdart: ^0.27.7
++  rich_text_controller: ^1.4.0
+ 
+ dev_dependencies:
+   flutter_test:
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -42,3 +42,23 @@
+ /android/app/debug
+ /android/app/profile
+ /android/app/release
++/android/
++/.idea/
++/build/
++/.idea/
++/build/
++/.idea/
++/build/
++/.idea/
++/.dart_tool/
++/.idea/
++/android/
++/build/
++/demo/
++/ios/
++/.dart_tool/
++/.idea/
++/android/
++/build/
++/demo/
++/ios/
