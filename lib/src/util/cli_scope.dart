@@ -1,25 +1,42 @@
 class CLIScope{
-  Function(String) _root_interpreter;
-  Function(String)? _active_interpreter;
-  CLIScope(this._root_interpreter);
+  final Function(String) _rootInterpreter;
+  Function(String)? _activeInterpreter;
+
+
+
+  ///sets off before the active interpreter
+  bool Function(String)? _topInterpreter;
+  set top(bool Function(String) interpreter){
+    _topInterpreter = interpreter;
+  }
+
+  CLIScope(this._rootInterpreter);
   request(Function(String) interpreter){
-    _active_interpreter = interpreter;
+    _activeInterpreter = interpreter;
   }
   release(){
-    _active_interpreter = null;
+    _activeInterpreter = null;
   }
   interpret(String s){
-    if(_active_interpreter!=null){
-      _active_interpreter!(s);
+    ///entry point for the input
+    if(_topInterpreter!=null){
+      if(_topInterpreter!(s)){
+        ///if the top interpreter returns true, then the input is consumed
+        return;
+      }
+    }
+    if(_activeInterpreter!=null){
+      _activeInterpreter!(s);
     }else{
-      _root_interpreter(s);
+      _rootInterpreter(s);
     }
   }
 
   bool isActive(Function(String) interpreter){
-    if(_active_interpreter==null){
-      return _root_interpreter == interpreter;
+    ///checks if the interpreter is the active interpreter
+    if(_activeInterpreter==null){
+      return _rootInterpreter == interpreter;
     }
-    return _active_interpreter == interpreter;
+    return _activeInterpreter == interpreter;
   }
 }
