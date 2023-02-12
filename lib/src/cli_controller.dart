@@ -2,11 +2,10 @@
 //set interpreter
 // get widget
 
+import 'package:command_line_interface/src/ui_controller/cli_listview/cli_listview_controller.dart';
+import 'package:command_line_interface/src/ui_controller/cli_screen/cli_screen_controller.dart';
+import 'package:command_line_interface/src/ui_controller/cli_textfield/cli_textfield_controller.dart';
 import 'package:flutter/cupertino.dart';
-
-import 'cli_listview/cli_listview_controller.dart';
-import 'cli_screen/cli_screen_controller.dart';
-import 'cli_textfield/cli_textfield_controller.dart';
 
 
 class CLIController{
