@@ -5,12 +5,12 @@ import '../../command_line_interface.dart';
 
 abstract class CLI {
   List<CommandNode> nodes = [];
-  CLIController cli;
+  CLIController controller;
   late CLIScope scope;
 
-  CLI(this.cli) {
+  CLI(this.controller) {
     scope = CLIScope(interpret);
-    cli.inputController.onSubmit.listen(scope.interpret);
+    controller.inputController.onSubmit.listen(scope.interpret);
   }
 
 
@@ -23,7 +23,7 @@ abstract class CLI {
 
 
   void add(CommandNode node){
-    node.cli = cli;
+    node.cli = controller;
     node.scope = scope;
     nodes.add(node);
   }
