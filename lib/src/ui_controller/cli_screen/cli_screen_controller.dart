@@ -9,7 +9,7 @@ class CLIScreenController{
   final BehaviorSubject<List<Widget>> _subject= BehaviorSubject<List<Widget>>.seeded([]);
   List<Widget> _content=[];
   List<Widget> get content => _content;
-  late Widget? _widget = null;
+  late Widget? _widget;
   set content(List<Widget> content){
     _content = content;
     _subject.add(_content);
