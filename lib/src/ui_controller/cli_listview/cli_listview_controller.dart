@@ -11,9 +11,12 @@ class CLIListViewController {
   /// get [scrollController] returns [ScrollController] the scroll controller for the ListView
   final BehaviorSubject<List<Widget>> _subject;
   List<Widget> _content=[];
-  final ScrollController _scrollController = ScrollController();
+  Widget? _widget;
+  ScrollController scrollController = ScrollController();
   CLIListViewController(): _subject = BehaviorSubject<List<Widget>>.seeded([]);
+
   // Stream<List<Widget>> get stream => _subject.stream;
+
 
   set content(List<Widget> content){
     _content = content;
@@ -21,7 +24,24 @@ class CLIListViewController {
   }
   List<Widget> get content => _content;
 
-  Widget get widget => Expanded(child:  cliListViewFactory(_subject.stream, _scrollController));
-  ScrollController get scrollController => _scrollController;
+  // Widget get widget => Expanded(child:  cliListViewFactory(_subject.stream, _scrollController));
+  // ScrollController get scrollController => _scrollController;
+
+
+  Widget get widget {
+    if (_widget == null) {
+      return newWidget;
+    }
+    return _widget!;
+  }
+
+  Widget get newWidget{
+    // if (_widget == null) {
+    _widget = Expanded(child:  cliListViewFactory(_subject.stream, scrollController));
+    // }
+    return _widget!;
+
+  }
+
 
 }

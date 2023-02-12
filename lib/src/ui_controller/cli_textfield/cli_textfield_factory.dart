@@ -6,13 +6,13 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
      TextEditingController controller,
      FocusNode focusNode, InputDecoration decoration,
     //textInputType
-    TextInputType keyboardType,
-    ) {
+    TextInputType keyboardType, {TextStyle? textStyle}) {
   //change to take stream, then sink the stream
   //
 
 
   TextField t =  TextField(
+    style: textStyle,
     onSubmitted: (String s){
       controller.clear();
 //       focusNode.requestFocus();//keep focused
@@ -29,6 +29,7 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
     keyboardType: keyboardType,
     minLines: 1,
     maxLines: maxLines,
+
     onEditingComplete: (){
       // focusNode.unfocus();
     },
