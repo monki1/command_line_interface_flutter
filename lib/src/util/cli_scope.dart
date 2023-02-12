@@ -15,4 +15,11 @@ class CLIScope{
       _root_interpreter(s);
     }
   }
+
+  bool isActive(Function(String) interpreter){
+    if(_active_interpreter==null){
+      return _root_interpreter == interpreter;
+    }
+    return _active_interpreter == interpreter;
+  }
 }
