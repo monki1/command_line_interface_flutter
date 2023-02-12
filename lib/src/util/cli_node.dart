@@ -2,13 +2,13 @@ import 'package:command_line_interface/src/util/cli_scope.dart';
 
 import '../../command_line_interface.dart';
 abstract class CLINode {
-  late CLIController cli;
+  late CLIController controller;
   late CLIScope scope;
   adopt(CLINode node){
     node.getAdopted(this);
   }
   getAdopted(CLINode node){
-    cli = node.cli;
+    controller = node.controller;
     scope = node.scope;
   }
 }

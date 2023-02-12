@@ -23,7 +23,7 @@ abstract class CLI {
 
 
   void add(CommandNode node){
-    node.cli = controller;
+    node.controller = controller;
     node.scope = scope;
     nodes.add(node);
   }
