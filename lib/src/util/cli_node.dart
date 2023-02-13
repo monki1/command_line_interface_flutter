@@ -1,7 +1,7 @@
-import 'package:command_line_interface/src/util/cli_scope.dart';
+import 'package:command_line_interface/command_line_interface.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../command_line_interface.dart';
+
 abstract class CLINode {
   late CLIController controller;
   late CLIScope scope;
@@ -22,8 +22,6 @@ abstract class CLINode {
 }
 
 abstract class CommandNode  extends CLINode{
-
-
   Future<bool> interpret(String s);
   bool isValidInput(String s);
   @override

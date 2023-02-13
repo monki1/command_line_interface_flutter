@@ -5,10 +5,11 @@ import 'cli_listview_factory.dart';
 
 
 class CLIListViewController {
-  /// set [content] takes in [List]of[Widget] and adds it to screen (first on top, last on bottom)
-  /// get [content] returns [List]of[Widget]the current content of the screen
+  /// set [content] takes in List<Widget> and adds it to screen (first on top, last on bottom)
+  /// get [content] returns List<Widget>the current content of the screen
   /// get [widget] returns the [ListView] widget
-  /// get [scrollController] returns [ScrollController] the scroll controller for the ListView
+  /// get [newWidget] returns a new [ListView] built from the current scrollController and other relevant data
+  /// get/set [scrollController] => [ScrollController] the scroll controller for the ListView
   final BehaviorSubject<List<Widget>> _subject;
   List<Widget> _content=[];
   Widget? _widget;
@@ -40,7 +41,6 @@ class CLIListViewController {
     _widget = Expanded(child:  cliListViewFactory(_subject.stream, scrollController));
     // }
     return _widget!;
-
   }
 
 

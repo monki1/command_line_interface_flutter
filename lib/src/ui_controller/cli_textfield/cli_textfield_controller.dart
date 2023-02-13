@@ -1,13 +1,13 @@
 
 
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:rxdart/rxdart.dart';
 
 import 'cli_textfield_factory.dart';
-import 'default_input_decoration.dart';
+
 
 class CLITextFieldController {
 
@@ -17,12 +17,7 @@ class CLITextFieldController {
   final BehaviorSubject <String> onChange;
   final BehaviorSubject <String> onSubmit;
   Widget? _widget;
-  // final BehaviorSubject <String> _autoFillStream;
-  InputDecoration inputDecoration;
-
-  //TODO
-  //hintStream
-  //keyboardTypeStream
+  InputDecoration? inputDecoration;
   TextEditingController textEditingController;
   TextStyle? textStyle;
   final FocusNode focusNode;
@@ -31,22 +26,22 @@ class CLITextFieldController {
     _keyboardType = type;
   }
 
-  CLITextFieldController({InputDecoration decoration = cliDefaultTextDecoration})
+  CLITextFieldController({this.inputDecoration})
       : onChange = BehaviorSubject<String>(),
         onSubmit = BehaviorSubject<String>(),
         // _autoFillStream = BehaviorSubject<String>(),
-        textEditingController = TextEditingController(
-        ),
-        focusNode = FocusNode()
-        ,inputDecoration = decoration;
-    // _autoFillStream.listen(addTextToField);
+        textEditingController = TextEditingController(),
+        focusNode = FocusNode();
+
 
 
   void addTextToField(String s) {
     textEditingController.text = s;
-    ///move cursor to end
+    moveInesertionPoint(textEditingController.text.length);
+  }
+  void moveInesertionPoint(int i){
     textEditingController.selection = TextSelection.fromPosition(
-        TextPosition(offset: textEditingController.text.length)
+        TextPosition(offset: i)
     );
   }
 
@@ -60,12 +55,12 @@ class CLITextFieldController {
   }
 
   Widget get newWidget{
-    // if (_widget == null) {
       _widget = cliTextFieldFactory(
           onChange, onSubmit,
           textEditingController,
-          focusNode, inputDecoration,
-          _keyboardType, textStyle: textStyle);
+          focusNode, 
+          _keyboardType, textStyle: textStyle,
+          decoration: inputDecoration);
     // }
     return _widget!;
 
