@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
-int maxLines = 50;
+int maxLines = 2048;
 
-TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSubject<String> onSubmitStream,
+TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream,     BehaviorSubject<String> onSubmitStream,
      TextEditingController controller,
-     FocusNode focusNode, InputDecoration decoration,
-    //textInputType
-    TextInputType keyboardType, {TextStyle? textStyle}) {
-  //change to take stream, then sink the stream
-  //
-
+     FocusNode focusNode,
+    TextInputType keyboardType, 
+    {TextStyle? textStyle, InputDecoration? decoration}) {
 
   TextField t =  TextField(
     style: textStyle,
     onSubmitted: (String s){
       controller.clear();
-//       focusNode.requestFocus();//keep focused
       onSubmitStream.add(s);
     },
     onChanged: (String s){
@@ -36,14 +32,3 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream, BehaviorSu
   );
   return t;
 }
-// superTextFieldStreamBuilder(BehaviorSubject<String> autofill, BehaviorSubject<String> submit, BehaviorSubject<String> onChanged, BehaviorSubject<TextInputType> keyboardType,   FocusNode focusNode
-// ){
-//
-//   return
-//     StreamBuilder(
-//         stream: keyboardType.stream,
-//         builder: (BuildContext context, AsyncSnapshot<TextInputType> snapshot){
-//           return superTextFieldFactory(autofill, submit, onChanged, focusNode, keyboardType: snapshot.data ?? TextInputType.text);
-//         }
-//     );
-// }
