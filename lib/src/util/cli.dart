@@ -1,30 +1,44 @@
 
 
 
-import '../../command_line_interface.dart';
+import 'package:command_line_interface/command_line_interface.dart';
 
-abstract class CLI {
+
+
+
+abstract class CLI extends CLINode{
+  // late CLIController controller;
+  // late CLIScope scope;
   List<CommandNode> nodes = [];
-  CLIController controller;
-  late CLIScope scope;
+  bool Function(String)? _topInterpreter;
+  bool Function(String)? _topListener;
 
-  CLI(this.controller) {
-    scope = CLIScope(interpret);
-    controller.input.onSubmit.listen(scope.interpret);
+
+
+  CLI(CLIController controller_){
+    controller = controller_;
+    scope = CLIScope(interpret, rootListener: listen);
+    scope.setTop(interpreter: _topInterpreter, listener: _topListener);
+
   }
 
 
   interpret(String s) async {
-    if(!await letNodesInterpret(s)){
+    if(!(await letNodesInterpret(s)) || s.isEmpty){
       rootScreen();
     }
   }
 
+  listen(String s) async {
+  
+  }
+
+  
+
 
 
   void add(CommandNode node){
-    node.controller = controller;
-    node.scope = scope;
+    adopt(node);
     nodes.add(node);
   }
 
@@ -38,13 +52,6 @@ abstract class CLI {
   }
 
   void rootScreen();
-
-  void adopt(CommandNode node){
-
-    nodes.add(node);
-  }
-
-
 
 }
 

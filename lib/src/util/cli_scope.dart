@@ -1,27 +1,41 @@
+
+
+
 class CLIScope{
+  // CLIController controller;
+  // Function(Function(String))? removeListener;
+  //get the text editing controller
   final Function(String) _rootInterpreter;
   Function(String)? _rootListener;
   Function(String)? _activeInterpreter;
   Function(String)? _activeListener;
-
-
-
-  ///sets off before the active interpreter
+  bool Function(String)? _topListener;
   bool Function(String)? _topInterpreter;
-  setTop(bool Function(String) interpreter, {Function(String)? listener}){
+
+
+
+  CLIScope(this._rootInterpreter,{Function(String)? rootListener}):
+        _rootListener = rootListener;
+        
+  setTop({bool Function(String)? interpreter, bool Function(String)? listener}){
     _topInterpreter = interpreter;
-    _rootListener = listener;
+    _topListener = listener;
   }
 
-  CLIScope(this._rootInterpreter);
   request(Function(String) interpreter, {Function(String)? listener}){
-    setTop(interpreter, listener: listener);
+    ///requests the interpreter to be the active interpreter
+    if(_activeInterpreter!=null ||_activeListener!=null){
+      release();
+    }
+    _activeInterpreter = interpreter;
+    _activeListener = listener;
   }
+
   release(){
     _activeInterpreter = null;
-    controller.input.textEditingController.removeListener(_activeListener!);
     _activeListener = null;
   }
+
   interpret(String s){
     ///entry point for the input
     if(_topInterpreter!=null){
@@ -36,8 +50,11 @@ class CLIScope{
       _rootInterpreter(s);
     }
   }
+
   listen(String s){
-    _topListener!(s);
+    if(_topListener!=null){
+      if(_topListener!(s)){return;}
+    }
     if(_activeListener!=null){
       _activeListener!(s);
     }else{
