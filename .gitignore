@@ -42,3 +42,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+.dart_tool/package_config.json
+.idea/misc.xml
+.idea/workspace.xml

@@ -22,14 +22,21 @@ class CLIScope {
     List<Function(String)> input = [interpreter]+(changeListener!=null?[changeListener]:[]);
     _suscribers.insert(0, input);
     return (){
-      release(interpreter, changeListener: changeListener);
+      // release(interpreter, changeListener: changeListener);
     };
   }
 
-  release(Function(String) interpreter, {Function(String)? changeListener}) {
-    List<Function(String)> input = [interpreter]+(changeListener!=null?[changeListener]:[]);
-    _suscribers.remove(input);
+  releaseActive() {
+    ///releases the active interpreter
+    if (_suscribers.isNotEmpty) {
+      _suscribers.removeAt(0);
+    }
   }
+
+  // release(Function(String) interpreter, {Function(String)? changeListener}) {
+  //   List<Function(String)> input = [interpreter]+(changeListener!=null?[changeListener]:[]);
+  //   _suscribers.remove(input);
+  // }
 
   
 
