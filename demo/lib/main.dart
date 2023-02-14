@@ -18,7 +18,7 @@ main(){
   runApp(
       quickAppGenerator(
         ///get [widget] from [CLIController]
-          cc.widget,
+          cc.screen.widget,
       )
   );
 }
