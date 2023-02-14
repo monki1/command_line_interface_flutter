@@ -22,15 +22,18 @@ abstract class ProtoNode extends CLINode {
 
   void add(CommandNode node){
     node.getAdopted(this);
+    for(CommandNode i in node.nodes){
+      i.getAdopted(this);
+    }
     nodes.add(node);
   }
 
   void loadScreen(){}
 
   bool get isActiveScope => scope.isActive(interpret);
-  releaseScope(){
-    scope.release(interpret);
-  }
+  // releaseScope(){
+  //   scope.release(interpret);
+  // }
   requestScope(){
     scope.request(interpret, changeListener: listenToChange);
   }

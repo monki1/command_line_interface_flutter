@@ -5,10 +5,11 @@ import 'package:flutter/cupertino.dart';
 abstract class CLINode {
   late CLIController controller;
   late CLIScope scope;
+  CLINode();
 
-  getAdopted(CLINode node){
-    controller = node.controller;
-    scope = node.scope;
+  getAdopted(CLINode node_){
+    controller = node_.controller;
+    scope = node_.scope;
   }
   set dropText(String s){
     controller.input.textEditingController.text = s;
@@ -20,6 +21,7 @@ abstract class CLINode {
 }
 
 abstract class FunctionNode extends CLINode{
+  FunctionNode();
 
 
 
