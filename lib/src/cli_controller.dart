@@ -6,15 +6,17 @@ import 'package:command_line_interface/src/ui_controller/cli_listview/cli_listvi
 import 'package:command_line_interface/src/ui_controller/cli_screen/cli_screen_controller.dart';
 import 'package:command_line_interface/src/ui_controller/cli_textfield/cli_textfield_controller.dart';
 
-
-
-class CLIController{
+class CLIController {
   final CLITextFieldController input;
   final CLIListViewController display;
   final CLIScreenController screen;
 
-  CLIController({Function(String)? interpreter ,CLITextFieldController? textFieldController, CLIListViewController? displayController, CLIScreenController? screenController})
-      :input = textFieldController ?? CLITextFieldController(),
+  CLIController(
+      {Function(String)? interpreter,
+      CLITextFieldController? textFieldController,
+      CLIListViewController? displayController,
+      CLIScreenController? screenController})
+      : input = textFieldController ?? CLITextFieldController(),
         display = displayController ?? CLIListViewController(),
-    screen = screenController ?? CLIScreenController();
+        screen = screenController ?? CLIScreenController();
 }

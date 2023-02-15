@@ -4,13 +4,10 @@ abstract class ProtoNode extends CLINode {
   List<CommandNode> nodes = [];
 
   interpret(String s) async {
-    ///the opinion is that
     if (!(await letNodesInterpret(s)) || s.isEmpty) {
-      loadScreen();
+      loadDefaultScreen();
     }
   }
-
-  listenToChange(String s) {}
 
   Future<bool> letNodesInterpret(String s) async {
     for (CommandNode node in nodes) {
@@ -23,19 +20,22 @@ abstract class ProtoNode extends CLINode {
 
   void add(CommandNode node) {
     node.getAdopted(this);
-    for (CommandNode i in node.nodes) {
-      i.getAdopted(this);
-    }
     nodes.add(node);
   }
 
-  void loadScreen() {}
+  listenToChange(String s) {}
+  void loadDefaultScreen() {}
+  void prepareEmptyScreen() {}
 
   bool get isActiveScope => scope.isActive(interpret);
   // releaseScope(){
   //   scope.release(interpret);
   // }
   requestScope() {
+    if (_releaseScope != null) {
+      releaseScope();
+    }
+
     _releaseScope = scope.request(interpret, changeListener: listenToChange);
   }
 

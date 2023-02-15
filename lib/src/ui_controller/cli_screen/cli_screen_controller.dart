@@ -1,22 +1,22 @@
-
 //the entire screen is a column built with a streambuilder from a behavior subject of a list of widgets
 //the list of widgets is the content of the screen
 
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
-class CLIScreenController{
-  final BehaviorSubject<List<Widget>> _subject= BehaviorSubject<List<Widget>>.seeded([]);
-  List<Widget> _content=[];
+class CLIScreenController {
+  final BehaviorSubject<List<Widget>> _subject =
+      BehaviorSubject<List<Widget>>.seeded([]);
+  List<Widget> _content = [];
   List<Widget> get content => _content;
   Widget? _widget;
-  set content(List<Widget> content){
+  set content(List<Widget> content) {
     _content = content;
     _subject.add(_content);
   }
+
   Widget getWidget() {
-    return
-    StreamBuilder<List<Widget>>(
+    return StreamBuilder<List<Widget>>(
       stream: _subject.stream,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
@@ -30,7 +30,7 @@ class CLIScreenController{
     );
   }
 
-    get widget{
+  get widget {
     _widget ??= getWidget();
     return _widget;
   }

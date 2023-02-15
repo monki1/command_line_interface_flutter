@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
+
 int maxLines = 2048;
 
-TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream,     BehaviorSubject<String> onSubmitStream,
-     TextEditingController controller,
-     FocusNode focusNode,
-    TextInputType keyboardType, 
-    {TextStyle? textStyle, InputDecoration? decoration}) {
-
-  TextField t =  TextField(
+TextField cliTextFieldFactory(
+    BehaviorSubject<String> onChangeStream,
+    BehaviorSubject<String> onSubmitStream,
+    TextEditingController controller,
+    FocusNode focusNode,
+    TextInputType keyboardType,
+    {TextStyle? textStyle,
+    InputDecoration? decoration}) {
+  TextField t = TextField(
     style: textStyle,
-    onSubmitted: (String s){
+    onSubmitted: (String s) {
       controller.clear();
       onSubmitStream.add(s);
     },
-    onChanged: (String s){
+    onChanged: (String s) {
       onChangeStream.add(s);
     },
     focusNode: focusNode,
@@ -25,8 +28,7 @@ TextField cliTextFieldFactory(BehaviorSubject<String> onChangeStream,     Behavi
     keyboardType: keyboardType,
     minLines: 1,
     maxLines: maxLines,
-
-    onEditingComplete: (){
+    onEditingComplete: () {
       // focusNode.unfocus();
     },
   );
