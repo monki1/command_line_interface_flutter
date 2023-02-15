@@ -41,7 +41,3 @@ abstract class CLINode {
     );
   }
 }
-
-abstract class FunctionNode extends CLINode {
-  FunctionNode();
-}
