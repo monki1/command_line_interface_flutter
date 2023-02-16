@@ -2,8 +2,10 @@ class CLIScope {
   // CLIController controller;
   // Function(Function(String))? removeListener;
   //get the text editing controller
-  final Function(String) _rootSubmitListener;
-  final Function(String)? _rootListener;
+  Function(String)? _rootSubmitListener;
+  set rootSubmitListener(Function(String) f) => _rootSubmitListener = f;
+  Function(String)? _rootChangeListener;
+  set rootListener(Function(String) f) => _rootChangeListener = f;
   // final List<List<Function(String)>> _suscribers = [];
   final List<String> _subscriberIds = [];
   final Map<String, List<Function(String)>> _subscribersMap = {};
@@ -11,8 +13,11 @@ class CLIScope {
   bool Function(String)? _topChangeListener;
   bool Function(String)? _topSubmitListener;
 
-  CLIScope(this._rootSubmitListener, {Function(String)? rootListener})
-      : _rootListener = rootListener;
+  CLIScope(
+      {Function(String)? rootSubmitListener,
+      Function(String)? rootChangeListener})
+      : _rootSubmitListener = rootSubmitListener,
+        _rootChangeListener = rootChangeListener;
 
   setTop(
       // / top functions :[@param topSubmitListener]: the function that will be called when the input is recieved
@@ -27,7 +32,13 @@ class CLIScope {
     _topChangeListener = topChangeListener;
   }
 
-  Function request(Function(String) submitListener,
+  setRoot(Function(String) rootSubmitListener,
+      {Function(String)? rootChangeListener}) {
+    _rootSubmitListener = rootSubmitListener;
+    _rootChangeListener = rootChangeListener;
+  }
+
+  Function pushToActive(Function(String) submitListener,
       {Function(String)? changeListener, String? id
 
       ///id should be unique, used to identify the subscriber layer.
@@ -78,7 +89,10 @@ class CLIScope {
 
       /// ^ if there is no subscriber
     } else {
-      _rootSubmitListener(s);
+      if (_rootSubmitListener == null) {
+        throw Error.safeToString("no root submit listener");
+      }
+      _rootSubmitListener!(s);
     }
   }
 
@@ -104,7 +118,7 @@ class CLIScope {
         k++;
       }
     } else {
-      _rootListener!(s);
+      _rootChangeListener!(s);
     }
   }
 
