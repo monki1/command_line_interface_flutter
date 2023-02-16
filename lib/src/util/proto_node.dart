@@ -36,7 +36,8 @@ abstract class ProtoNode extends CLINode {
       releaseScope();
     }
 
-    _releaseScope = scope.request(interpret, changeListener: listenToChange);
+    _releaseScope =
+        scope.pushToActive(interpret, changeListener: listenToChange);
   }
 
   Function? _releaseScope;

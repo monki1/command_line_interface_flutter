@@ -9,7 +9,7 @@ abstract class CommandNode extends ProtoNode {
     if (node_ is ProtoNode) {
       parent = node_;
     }
-    //pass down adoption
+
     for (CommandNode cn in nodes) {
       cn.getAdopted(this);
     }
