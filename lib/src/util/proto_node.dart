@@ -32,21 +32,19 @@ abstract class ProtoNode extends CLINode {
   //   scope.release(interpret);
   // }
   requestScope() {
-    if (_releaseScope != null) {
-      releaseScope();
+    if (!isActiveScope) {
+      _releaseScope.insert(
+          0, scope.pushToActive(interpret, changeListener: listenToChange));
     }
-
-    _releaseScope =
-        scope.pushToActive(interpret, changeListener: listenToChange);
   }
 
-  Function? _releaseScope;
+  List<Function> _releaseScope = [];
 
   releaseScope() {
-    if (_releaseScope != null) {
-      releaseScope();
+    if (_releaseScope.isNotEmpty) {
+      _releaseScope[0]();
       dropText = ""; //empty str calls loadScreen of next in queue
-      _releaseScope = null;
+      _releaseScope.removeAt(0);
     }
   }
 }
